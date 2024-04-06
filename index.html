@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/header.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@700&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;800;900&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+    $(document).ready(function(){
+        $("tbody td:nth-child(2)").addClass("price");
+    });
+    </script>
+    <script>console.log(document.getElementsByClassName("s2"));
+    </script>
+    <title>Health Guard</title>
+  </head>
+  <body>
+
+<!-- 
+
+    <div class="overlay">
+      <div class="loading">
+  <svg width="64px" height="48px">
+      <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+    <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+  </svg>
+</div>
+    </div>
+    <style>
+      .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Semi-transparent black overlay */
+  z-index: 9999; /* Ensure it appears above other content */
+  animation: decreaseHeight 1s forwards 4s; /* Animation properties */
+}
+
+@keyframes decreaseHeight {
+  0% {
+    height: 100%; /* Initial height */
+  }
+  100% {
+    height: 0; /* Final height */
+  }
+}
+.loading svg {
+  margin: auto;
+}
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #ff4d4f;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+
+  position: fixed;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 1s ease;
+}
+
+@keyframes riseUp {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100px); /* Adjust value to how much you want to rise */
+  }
+}
+
+/* Add animation to loading class */
+.loading {
+  animation: riseUp 1s forwards 4s; /* Animation properties */
+}
+
+.header__content {
+       
+       position: relative;
+       animation: translateLeft 1s forwards;
+     }
+     @keyframes translateLeft {
+  0% {
+    transform: translateX(-100px); /* Initial position, translated 10px to the right */
+  }
+  100% {
+    transform: translateX(0); /* Final position, no translation */
+  }
+}
+
+/* Add animation delay */
+.header__content {
+  animation-delay: 4s; /* Delay the animation by 4 seconds */
+}
+#submit-form {
+       
+       position: relative;
+       animation: translateLeft 1s forwards;
+     }
+     @keyframes translateLeft {
+  0% {
+    transform: translateX(-100px); /* Initial position, translated 10px to the right */
+  }
+  100% {
+    transform: translateX(0); /* Final position, no translation */
+  }
+}
+    </style>
+
+
+
+
+
+ -->
+
+
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">Health<span>Guard</span></div>
+        <ul class="nav__links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">Appointments</a></li>
+          <li class="link"><a href="#">History</a></li>
+          <li class="link"><a href="#">AI prediction</a></li>
+          <li class="link"><a href="#">Helth Suggestion</a></li>
+        </ul>
+        <button class="btn">Contact </button>
+      </nav>
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h1>"Providing Innovative Healthcare Solutions"</h1>
+          <p>
+            "Providing Innovative Healthcare Solutions" signifies our dedication to pioneering advancements in patient care. From telemedicine appointments to predictive analytics, we empower individuals with cutting-edge tools for managing their health effectively and efficiently.
+          </p>
+          <section class="neon-section">
+            <!-- Your button with the 'btn' class -->
+            <button class="btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Current Status
+            </button>
+          </section>        </div>
+        <div class="header__form">
+          <form
+          method="post"
+          id="submit-form"
+          name="product"
+          id="product"
+          action="">
+            <h4>Take an Appointments</h4>
+            <input type="text" placeholder="First Name" name="fname" />
+            <input type="text" placeholder="Last Name" name="lname" />
+            <input type="text" placeholder="Address" name="address" />
+            <input type="text" placeholder="Phone No." name="phno" />
+            <button class="btn form__btn" type="submit">Book Now</button>
+          </form>
+
+
+     
+<style>
+  #submit-form {
+    animation-delay: 4s; /* Delay the animation by 4 seconds */
+  }
+</style>
+
+
+
+          <script>
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbw5vBAS7ExuJHQ-U5CL-_SLyXlETdPgs0re2GoKibNYF5aLgb91qvdQv1LYsmYTmRVGwQ/exec";
+            const from = document.forms["product"];
+    
+            from.addEventListener("submit", (e) => {
+                e.preventDefault();
+                fetch(scriptURL, { method: "POST", body: new FormData(from) })
+                    .then((responce) => {
+                        alert("Thank you! your form is sumitted successfully");
+                        window.location.href = "";
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            });
+        </script>
+
+
+        </div>
+      </div>
+    </header>
+    
+
+  
+
+
+  
+
+  <div id="data" class="gradient-box animated"></div>
+  <style>
+#data {
+    font-size: 29px;
+    width: 81%;
+    margin: 80px auto;
+    padding: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 20px;
+}
+.gradient-box {
+  width: 200px;
+  height: 200px;
+}
+.animated {
+  animation: gradient-animation 2s infinite alternate; /* Animation properties */
+  background: linear-gradient(to right, #c41d00, #ff4f4f); /* Initial gradient */
+  transition: all ;
+}
+
+#data p {
+    font-family: "Mukta", sans-serif;
+    font-weight: 520;
+    font-style: normal;
+    color: white;
+    padding: 0px 14px;
+    text-align: center;
+}
+  </style>
+
+  <script>
+    function fetchData() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.thingspeak.com/channels/2498253/feeds.json?api_key=TE3MKVWRGW9EXWY9&results=1');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var data = JSON.parse(xhr.responseText);
+          var feeds = data.feeds;
+          var html = '';
+          for (var i = 0; i < feeds.length; i++) {
+            var temperature = parseFloat(feeds[i].field1);
+            var pressure = parseFloat(feeds[i].field2);
+            var heartRate = parseFloat(feeds[i].field3);
+            var bloodPressure = parseFloat(feeds[i].field4);
+            var temperatureDisplay = temperature;
+            var pressureDisplay = pressure;
+            var heartRateDisplay = heartRate;
+            var bloodPressureDisplay = bloodPressure;
+            
+  
+            if (temperature > 100) {
+              temperatureDisplay += ' High';
+            } else if (temperature < 36) {
+              temperatureDisplay += ' Low';
+            } else {
+              temperatureDisplay += ' Normal';
+            }
+  
+            if (pressure < 110) {
+              pressureDisplay += ' Low';
+            } else if (pressure > 130) {
+              pressureDisplay += ' High';
+            } else {
+              pressureDisplay += ' normal';
+            }
+  
+            if (heartRate < 79) {
+              heartRateDisplay += ' Low';
+            } else if (heartRate > 101) {
+              heartRateDisplay += ' High';
+            } else {
+              heartRateDisplay += ' Normal';
+            }
+  
+            if (bloodPressure < 89) {
+              bloodPressureDisplay += ' Low';
+            } else if (bloodPressure > 96) {
+              bloodPressureDisplay += ' High';
+            } else {
+              bloodPressureDisplay += ' Normal';
+            }
+  
+            html += '<p>Temperature: ' + temperatureDisplay + '</p>';
+            html += '<p>Pressure: ' + pressureDisplay + '</p>';
+            html += '<p>Heart Rate: ' + heartRateDisplay + '</p>';
+            html += '<p>BP: ' + bloodPressureDisplay + '</p>';
+          }
+          document.getElementById('data').innerHTML = html;
+        }
+      };
+      xhr.send();
+    }
+  
+    // Fetch data every 30 seconds
+    setInterval(fetchData, 30000);
+  </script>
+
+
+<h1>Pay Here</h1>
+<ul class="qr">
+  
+  <li class="iframe"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQxIgS-ZWgSI-P33iJF7TIpzBQrSyxX6tPSFkshYXm3meh2ypROeHiQm4RMpUGEubml5Tviv5qcRX7Q/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="10%"></iframe></li>
+  <li>
+    <div id="qrcode"></div>
+  </li>
+</ul>
+<style>
+  h1 {
+    margin: auto;
+    margin: 30px 0px;
+    padding: 0px 50px 0px;
+    color: #c41d00;
+  }
+  div#qrcode, div#qrcode img {
+    width: 200px;
+    height: 200px;
+  }
+  iframe {
+    width: 90%;
+    height: 280px;
+  }
+  .iframe {
+    width: 80%;
+    border: none;
+  }
+  ul.qr {
+    display: flex ;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 50px;
+    align-items: center;
+  }
+</style>
+
+  <script>
+    // Function to generate Google Pay payment URL
+    function generatePaymentUrl(upiId, amount) {
+      return `upi://pay?pa=${encodeURIComponent(upiId)}&am=${encodeURIComponent(amount)}&cu=INR`;
+    }
+
+    // Replace 'YOUR_UPI_ID' and 'AMOUNT' with actual UPI ID and amount
+    const upiId = 'sreenandcreativegallery@okaxis';
+    const amount = '1500';
+
+    // Generate payment URL
+    const paymentUrl = generatePaymentUrl(upiId, amount);
+
+    // Generate QR code
+    const qr = qrcode(0, 'M');
+    qr.addData(paymentUrl);
+    qr.make();
+
+    // Render QR code
+    document.getElementById('qrcode').innerHTML = qr.createImgTag();
+  </script>
+
+
+
+</style>
+
+
+<ul class="pr">
+  <li>For Online Blood Facility</li>
+  <li>
+    <a href="https://purelink.in" target="blank">Go to Pure Link</a>
+  </li>
+</ul>
+<style>
+  ul.pr {
+    width: 100%;
+    margin: auto;
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    padding: 40px;
+  }
+  ul.pr li {
+    padding: 0px 30px;
+  }
+  ul.pr {
+    color: #c41d00;
+    font-size: 24px;
+    font-weight: 550;
+  }
+  ul.pr a {
+    background: #ff5151;
+    color: rgb(56, 0, 102);
+    padding: 10px 19px;
+    border-radius: 50px;
+  }
+</style>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Benefits</h4>
+          <ul>
+            <li><a href="#">User Friendly</a></li>
+            <li><a href="#">real-time 
+              monitoring</a></li>
+            <li><a href="#">Live interaction</a></li>
+            <li><a href="#">booking doctor appoinments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>significance</h4>
+          <ul>
+            <li><a href="#">Mnanagment of time</a></li>
+            <li><a href="#">Easy usability</a></li>
+            <li><a href="#">Real time mmonitoring</a></li>
+            <li><a href="#">Virtual payment</a></li>
+            <li><a href="#">Virtual visit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our vision</h4>
+          <ul>
+            <li><a href="#">Decrease the rate of death</a></li>
+            <li><a href="#">Decrease unexpected misseries</a></li>
+            <li><a href="#">Reduce hosptital traffic</a></li>
+            <li><a href="#">Simplyfies payment system</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+</body>
+</html>
